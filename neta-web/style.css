@@ -1,0 +1,54 @@
+:root { --g1: #0a5c40; --g2: #0d9668; --light: #81c784; }
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: system-ui, "Segoe UI", sans-serif;
+    color: #e8f5e9;
+    background: linear-gradient(160deg, #0f1a14, #1c2b22);
+}
+main { max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
+
+header { display: flex; align-items: center; gap: 14px; }
+header img { height: 56px; }
+header h1 { margin: 0; font-size: 2.4rem; letter-spacing: 3px; color: var(--g2); }
+.sub { color: #a5c9ac; margin: 6px 0 20px; }
+
+label.file {
+    display: block; padding: 18px; text-align: center; cursor: pointer;
+    border: 2px dashed var(--g2); border-radius: 14px; transition: .2s;
+}
+label.file:hover { background: #0d966822; }
+input[type=file] { display: none; }
+
+#preview { display: block; width: 100%; max-width: 300px; margin: 16px 0 4px; border-radius: 12px; }
+#status { margin: 8px 0; font-weight: 600; }
+
+.box { margin: 12px 0; padding: 14px 16px; background: #ffffff10; border-radius: 14px; }
+.chip { display: flex; align-items: center; gap: 10px; padding: 8px 0; }
+.chip input[type=number] { display: none; width: 80px; }
+.chip:has(input[type=checkbox]:checked) input[type=number] { display: inline-block; }
+.chip small { color: #a5c9ac; }
+
+input[type=text], input[type=number] {
+    padding: 10px; font-size: 1rem; color: #fff;
+    background: #0f1a14; border: 1px solid var(--g2); border-radius: 10px;
+}
+input[type=text] { width: 100%; }
+
+button {
+    width: 100%; margin-top: 12px; padding: 14px;
+    font-size: 1.05rem; font-weight: 700; color: #fff; cursor: pointer;
+    background: linear-gradient(90deg, var(--g1), var(--g2)); border: 0; border-radius: 12px;
+}
+button:hover { filter: brightness(1.15); }
+
+h3 { margin: 20px 0 6px; color: var(--light); }
+.card {
+    margin: 8px 0; padding: 12px 16px; color: #1b3a2a;
+    background: #ffffffe6; border-left: 6px solid var(--g2);
+    border-radius: 14px; box-shadow: 0 2px 8px #0003;
+}
+.hint { color: #7f9a86; font-size: .88rem; }
+.card .hint { color: #5f7266; }
